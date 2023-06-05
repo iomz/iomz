@@ -4,100 +4,67 @@
 
 name: Metrics
 on:
+  push:
+    branches:
+      - main
   # 🌏 Think about the planet! No need to update stats too frequently
-  schedule: [{cron: "0 16 * * *"}]
+  schedule: [ { cron: "22 22 * * *" } ]
   # 💡 The following line lets you run workflow manually from the action tab!
   workflow_dispatch:
 jobs:
-  metrics:
+  github-metrics:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-
-      - name: 🦑 Medias
-        if: ${{ success() || failure() }}
-        uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@latest
         with:
-          filename: medias.svg
-          token: ${{ secrets.TOKEN }}
-          base: ""
-          config_order: anilist, music
-          output_action: gist
-          committer_gist: ${{ secrets.GIST }}
-          plugin_anilist: yes
-          plugin_anilist_medias: anime
-          plugin_anilist_sections: favorites, characters
-          plugin_anilist_limit: 2
-          plugin_anilist_limit_characters: 22
-          plugin_music: yes
-          plugin_music_playlist: ${{ secrets.PLAYLIST }}
-          plugin_music_limit: 9
-
-      - name: 🦑 Achievements
-        if: ${{ success() || failure() }}
-        uses: lowlighter/metrics@latest
-        with:
-          filename: achievements.svg
-          token: ${{ secrets.TOKEN }}
-          base: ""
-          output_action: gist
-          committer_gist: ${{ secrets.GIST }}
+          filename: github-metrics.svg
+          # Your GitHub token
+          # The following scopes are required:
+          #  - public_access (default scope)
+          # The following additional scopes may be required:
+          #  - read:org      (for organization related metrics)
+          #  - read:user     (for user related data)
+          #  - read:packages (for some packages related data)
+          #  - repo          (optional, if you want to include private repositories)
+          token: ${{ secrets.METRICS_TOKEN }}
+          # Options
+          user: iomz
+          template: classic
+          base: header, activity, community, repositories, metadata
+          config_timezone: Europe/Zurich
           plugin_achievements: yes
           plugin_achievements_display: compact
-          plugin_fortune: yes
-
-      - name: 🦑 Sponsors
-        if: ${{ success() || failure() }}
-        uses: lowlighter/metrics@latest
-        with:
-          filename: sponsors.svg
-          token: ${{ secrets.TOKEN }}
-          base: ""
-          output_action: gist
-          committer_gist: ${{ secrets.GIST }}
-          plugin_sponsors: yes
-          plugin_sponsors_past: yes
-          plugin_sponsorships: yes
-          plugin_sponsorships_sections: amount
-
-      - name: 🦑 General
-        if: ${{ success() || failure() }}
-        uses: lowlighter/metrics@latest
-        with:
-          filename: general.svg
-          token: ${{ secrets.TOKEN }}
-          base: header
-          base_indepth: yes
-          config_order: base.header, isocalendar, languages, notable, discussions, topics
-          output_action: gist
-          committer_gist: ${{ secrets.GIST }}
+          plugin_achievements_secrets: yes
+          plugin_achievements_threshold: C
           plugin_isocalendar: yes
+          plugin_isocalendar_duration: half-year
           plugin_languages: yes
-          plugin_languages_ignored: html, css, tex, less, dockerfile, makefile, qmake, lex, cmake, shell, gnuplot, vue, scala, c, c++, python, ejs
-          plugin_languages_details: lines, bytes-size, percentage
-          plugin_languages_sections: most-used, recently-used
+          plugin_languages_analysis_timeout: 15
+          plugin_languages_analysis_timeout_repositories: 7.5
+          plugin_languages_categories: markup, programming
+          plugin_languages_colors: github
+          plugin_languages_ignored: html, java, javascript, matlab, css, tex, less, dockerfile, makefile, qmake, lex, cmake, shell, gnuplot, vue, scala, ejs
           plugin_languages_indepth: yes
-          plugin_languages_limit: 2
+          plugin_languages_limit: 4
+          plugin_languages_recent_categories: markup, programming
+          plugin_languages_recent_days: 14
+          plugin_languages_recent_load: 300
+          plugin_languages_sections: most-used, recently-used
+          plugin_languages_threshold: 0%
+          plugin_lines: yes
+          plugin_lines_history_limit: 1
+          plugin_lines_repositories_limit: 4
+          plugin_lines_sections: base
+          plugin_notable: yes
+          plugin_repositories: yes
+          plugin_repositories_featured: bibfuse, radicron, dl-myo
+          plugin_repositories_order: featured, pinned, starred, random
+          plugin_repositories_pinned: 4
+          plugin_repositories_starred: 4
+          plugin_stars: yes
+          plugin_stars_limit: 4
           plugin_topics: yes
           plugin_topics_limit: 0
           plugin_topics_mode: icons
-          plugin_notable: yes
-          plugin_discussions: yes
-          
-      - name: 🦑 Splatoon
-        uses: lowlighter/metrics@latest
-        if: ${{ success() || failure() }}
-        with:
-          filename: splatoon.svg
-          token: ${{ secrets.TOKEN }}
-          base: ""
-          output_action: gist
-          committer_gist: ${{ secrets.GIST }}
-          plugin_splatoon: yes
-          plugin_splatoon_token: ${{ secrets.SPLATOON_TOKEN }}
-          plugin_splatoon_statink: yes
-          plugin_splatoon_statink_token: ${{ secrets.SPLATOON_STATINK_TOKEN }}
-          plugin_splatoon_sections: salmon-run
-          plugin_splatoon_salmon_limit: 2
-          extras_css: |
-            h2 { display: none !important; }
-            .match:not(:last-child) { padding-bottom: 4px; }
