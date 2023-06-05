@@ -8,7 +8,7 @@ on:
     branches:
       - main
   # 🌏 Think about the planet! No need to update stats too frequently
-  schedule: [ { cron: "22 22 * * *" } ]
+  schedule: [{cron: "22 22 * * *"}]
   # 💡 The following line lets you run workflow manually from the action tab!
   workflow_dispatch:
 jobs:
@@ -45,13 +45,13 @@ jobs:
           plugin_languages_analysis_timeout_repositories: 7.5
           plugin_languages_categories: markup, programming
           plugin_languages_colors: github
-          plugin_languages_ignored: html, java, javascript, matlab, css, tex, less, dockerfile, makefile, qmake, lex, cmake, shell, gnuplot, vue, scala, ejs
+          plugin_languages_ignored: c, html, java, matlab, css, tex, less, dockerfile, makefile, qmake, lex, cmake, shell, gnuplot, vue, scala, ejs
           plugin_languages_indepth: yes
-          plugin_languages_limit: 4
+          plugin_languages_limit: 10
           plugin_languages_recent_categories: markup, programming
           plugin_languages_recent_days: 14
           plugin_languages_recent_load: 300
-          plugin_languages_sections: most-used, recently-used
+          plugin_languages_sections: recently-used, most-used
           plugin_languages_threshold: 0%
           plugin_lines: yes
           plugin_lines_history_limit: 1
@@ -60,11 +60,8 @@ jobs:
           plugin_notable: yes
           plugin_repositories: yes
           plugin_repositories_featured: bibfuse, radicron, dl-myo
-          plugin_repositories_order: featured, pinned, starred, random
+          plugin_repositories_order: featured, pinned, starred
           plugin_repositories_pinned: 4
           plugin_repositories_starred: 4
           plugin_stars: yes
           plugin_stars_limit: 4
-          plugin_topics: yes
-          plugin_topics_limit: 0
-          plugin_topics_mode: icons
