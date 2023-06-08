@@ -32,7 +32,7 @@ jobs:
           # Options
           user: iomz
           template: classic
-          base: header, activity, community, repositories, metadata
+          base: header, activity, repositories
           config_timezone: Europe/Zurich
           plugin_achievements: yes
           plugin_achievements_display: compact
@@ -51,17 +51,17 @@ jobs:
           plugin_languages_recent_categories: markup, programming
           plugin_languages_recent_days: 14
           plugin_languages_recent_load: 300
-          plugin_languages_sections: recently-used, most-used
-          plugin_languages_threshold: 0%
+          plugin_languages_sections: recently-used
+          plugin_languages_threshold: 10%
           plugin_lines: yes
           plugin_lines_history_limit: 1
           plugin_lines_repositories_limit: 4
           plugin_lines_sections: base
-          plugin_notable: yes
-          plugin_repositories: yes
-          plugin_repositories_featured: bibfuse, radicron, dl-myo
-          plugin_repositories_order: featured, pinned, starred
-          plugin_repositories_pinned: 4
-          plugin_repositories_starred: 4
-          plugin_stars: yes
-          plugin_stars_limit: 4
+          #plugin_notable: yes
+          #plugin_repositories: yes
+          #plugin_repositories_featured: bibfuse, radicron, dl-myo
+          #plugin_repositories_order: featured, pinned, starred
+          #plugin_repositories_pinned: 4
+          #plugin_repositories_starred: 4
+          #plugin_stars: yes
+          #plugin_stars_limit: 4
