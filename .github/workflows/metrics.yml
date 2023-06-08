@@ -32,7 +32,7 @@ jobs:
           # Options
           user: iomz
           template: classic
-          base: header, activity, repositories
+          base: header, activity, community, repositories, metadata
           config_timezone: Europe/Zurich
           plugin_achievements: yes
           plugin_achievements_display: compact
@@ -45,12 +45,13 @@ jobs:
           plugin_languages_analysis_timeout_repositories: 7.5
           plugin_languages_categories: markup, programming
           plugin_languages_colors: github
-          plugin_languages_ignored: c, html, java, matlab, css, tex, less, dockerfile, makefile, qmake, lex, cmake, shell, gnuplot, vue, scala, ejs
+          plugin_languages_ignored: c, html, java, matlab, css, tex, less, makefile, qmake, lex, cmake, gnuplot, vue, scala, ejs
           plugin_languages_indepth: yes
-          plugin_languages_limit: 10
+          plugin_languages_details: bytes-size, percentage
+          plugin_languages_limit: 5
           plugin_languages_recent_categories: markup, programming
-          plugin_languages_recent_days: 14
-          plugin_languages_recent_load: 300
+          plugin_languages_recent_days: 30
+          plugin_languages_recent_load: 400
           plugin_languages_sections: recently-used
           plugin_languages_threshold: 10%
           plugin_lines: yes
