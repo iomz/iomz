@@ -1,5 +1,5 @@
 <picture>
-  <img width="80%" align="center" src="/github-metrics.svg" alt="Metrics">
+  <img src="/github-metrics.svg" alt="Metrics">
 </picture>
 
-<sub>These infographics were generated using [lowlighter/metrics](https://github.com/lowlighter/metrics)</sub>
+![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=iomz&layout=compact&hide=c,css,html,java,javascript,makefile,matlab,shell,tex,ruby&theme=tokyonight)
