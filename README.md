@@ -5,3 +5,9 @@
 <!-- [![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=iomz&hide_border=true&theme=tokyonight&langs_count=5&hide=c,css,html,java,javascript,makefile,matlab,shell,tex,ruby)](https://github.com/anuraghazra/github-readme-stats) -->
 
 [![wakatime](https://wakatime.com/badge/user/d6d4d496-bd86-42c2-b1f2-a178b6f0f3f6.svg)](https://wakatime.com/@d6d4d496-bd86-42c2-b1f2-a178b6f0f3f6)
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="github-snake.svg" />
+  <img alt="github-snake" src="github-snake.svg" />
+</picture>
