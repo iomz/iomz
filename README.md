@@ -7,7 +7,7 @@
 [![wakatime](https://wakatime.com/badge/user/d6d4d496-bd86-42c2-b1f2-a178b6f0f3f6.svg)](https://wakatime.com/@d6d4d496-bd86-42c2-b1f2-a178b6f0f3f6)
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="/iomz/iomz/blob/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="/iomz/iomz/blob/output/github-snake.svg" />
-  <img alt="github-snake" src="/iomz/iomz/blob/output/github-snake.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/iomz/iomz/refs/heads/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/iomz/iomz/refs/heads/output/ocean.gif" />
+  <img alt="github-snake" src="https://raw.githubusercontent.com/iomz/iomz/refs/heads/output/github-snake.svg" />
 </picture>
