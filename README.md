@@ -1,4 +1,4 @@
-[![GitHub Streak](https://streak-stats.demolab.com?user=iomz&theme=horizon&date_format=%5BY%20%5DM%20j)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.sazanka.io/?user=iomz&theme=horizon&date_format=%5BY%20%5DM%20j)](https://git.io/streak-stats)
 
 [![Wakatime Stats](https://github-readme-stats.vercel.app/api/wakatime?username=iomz&layout=compact&theme=tokyonight&hide_border=true)](https://wakatime.com/@iomz)
 
