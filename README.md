@@ -1,7 +1,5 @@
 [![GitHub Streak](https://streak-stats.sazanka.io/?user=iomz&theme=horizon&date_format=%5BY%20%5DM%20j)](https://git.io/streak-stats)
 
-[![Wakatime Stats](https://github-readme-stats.sazanka.io/api/wakatime?username=iomz&layout=compact&theme=tokyonight&hide_border=true)](https://wakatime.com/@iomz)
-
 [![wakatime](https://wakatime.com/badge/user/d6d4d496-bd86-42c2-b1f2-a178b6f0f3f6.svg)](https://wakatime.com/@d6d4d496-bd86-42c2-b1f2-a178b6f0f3f6)
 
 <picture>
